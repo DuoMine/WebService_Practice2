@@ -1,8 +1,6 @@
 # WebService_Practice2
 📘 Backend Assignment – Express API
 
-이 프로젝트는 Express 기반으로 구현된 실습 과제이며, 다음 요구사항을 충족하도록 개발되었습니다.
-
 HTTP 메소드별 API 구현
 
 POST / GET / PUT / DELETE 각각 2개 이상 → 총 8개 이상
@@ -11,7 +9,7 @@ POST / GET / PUT / DELETE 각각 2개 이상 → 총 8개 이상
 
 2xx / 4xx / 5xx 응답 코드 다양하게 사용
 
-수업 자료에 제시된 표준 응답 포맷으로统一
+수업 자료에 제시된 표준 응답 포맷
 
 📁 프로젝트 구조
 ```
@@ -181,6 +179,7 @@ Todo 수정
 ---
 1) Postman / Insomnia
 ```
+import Express_postman_collection.json
 ```
 
 2) curl 테스트 예시
