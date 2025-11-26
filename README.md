@@ -34,6 +34,7 @@ express-assignment/
 ```
 
 📡 실행 방법
+---
 1) 패키지 설치
 npm install
 
@@ -72,8 +73,10 @@ MAINTENANCE=false
     "message": "INTERNAL_ERROR"
   }
 }
+---
 
 🧩 구현된 기능
+---
 ⭐ 미들웨어
 1) 요청 로깅 미들웨어 (logger.js)
 
@@ -88,11 +91,11 @@ morgan을 사용하여 요청 URL, 메서드, 응답 시간 등을 기록
 모든 요청을 503 Service Unavailable로 응답
 
 서버 점검 시나리오 구현
+---
+
 
 🗂 API 목록 (총 12개 제공)
-
-아래는 과제 기준인 “각 메서드 2개 이상(총 8개)”을 포함한다.
-
+---
 📌 Todos API
 ✔ GET /api/v1/todos — 200 OK
 
@@ -114,7 +117,9 @@ Todo 수정
 ✔ DELETE /api/v1/todos/:id — 204 NO_CONTENT
 
 삭제 후 빈 응답
+---
 
+---
 📌 Users API
 ✔ GET /api/v1/users — 200 OK
 
@@ -141,8 +146,12 @@ Todo 수정
 ✔ GET /api/v1/users/__crash — 500 INTERNAL_ERROR
 
 의도적 서버 오류 발생 테스트 라우트
+---
+
 
 📊 사용된 상태 코드 정리
+
+---
 상태코드	발생 API	설명
 200 OK	GET /todos, GET /users	정상 조회
 201 CREATED	POST /todos, POST /users	새 리소스 생성
@@ -152,7 +161,10 @@ Todo 수정
 409 CONFLICT	POST /users (이메일 중복)	데이터 충돌
 500 INTERNAL_ERROR	GET /users/__crash	의도적 서버 오류
 503 SERVICE_UNAVAILABLE	maintenance 모드	점검 중
+---
+
 🧪 테스트 방법
+---
 1) Postman / Insomnia
 
 import 가능한 Collection JSON 제공:
@@ -170,3 +182,4 @@ User 중복 테스트
 curl -X POST http://localhost:3000/api/v1/users \
  -H "Content-Type: application/json" \
  -d "{\"name\":\"Dup\", \"email\":\"alice@example.com\"}"
+ ---
