@@ -1,4 +1,5 @@
-# WebService_Practice2📘 Backend Assignment – Express API
+# WebService_Practice2
+📘 Backend Assignment – Express API
 
 이 프로젝트는 Express 기반으로 구현된 실습 과제이며, 다음 요구사항을 충족하도록 개발되었습니다.
 
