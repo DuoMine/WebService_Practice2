@@ -14,6 +14,7 @@ POST / GET / PUT / DELETE 각각 2개 이상 → 총 8개 이상
 수업 자료에 제시된 표준 응답 포맷으로统一
 
 📁 프로젝트 구조
+```
 express-assignment/
 ├─ package.json
 ├─ README.md
@@ -30,6 +31,7 @@ express-assignment/
    └─ routes/
       ├─ todos.js
       └─ users.js
+```
 
 📡 실행 방법
 1) 패키지 설치
