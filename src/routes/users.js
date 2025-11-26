@@ -4,6 +4,11 @@ import { ok, created, noContent, clientError, serverError } from "../utils/respo
 
 const r = Router();
 
+/** GET /api/v1/users-crash (의도적 500 테스트용) */
+r.get("/__crash", (_req, res) => {
+  return serverError(res, 500, "INTERNAL_ERROR", "Intentional crash for demo");
+});
+
 /** GET /api/v1/users (200) */
 r.get("/", (req, res) => {
   return ok(res, db.users);
@@ -52,9 +57,5 @@ r.delete("/:id", (req, res) => {
   return noContent(res);
 });
 
-/** GET /api/v1/users-crash (의도적 500 테스트용) */
-r.get("/__crash", (_req, res) => {
-  return serverError(res, 500, "INTERNAL_ERROR", "Intentional crash for demo");
-});
 
 export default r;
